@@ -8,8 +8,12 @@
 
 import UIKit
 
-class ViewController: UIViewController {
-
+class PlayVC: UIViewController {
+    @IBOutlet var rockButton:UIButton!
+    @IBOutlet var paperButton:UIButton!
+    @IBOutlet var scissorsButton:UIButton!
+    @IBOutlet var playLabel:UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
