@@ -19,6 +19,20 @@ class PlayVC: UIViewController {
         // Do any additional setup after loading the view.
     }
 
+    func randomSelection() -> Int {
+        let randomValue = 1 + arc4random() % 3
+        
+        return Int(randomValue)
+    }
 
+    
+    @IBAction func rockButtonPressed(){
+        let resultVC: ResultsVC
+        
+        resultVC = storyboard?.instantiateViewController(withIdentifier: "ResultsVC") as! ResultsVC
+        
+        resultVC.rockValue = self.randomSelection()
+        self.present(resultVC,animated: true, completion: nil)
+    }
 }
 

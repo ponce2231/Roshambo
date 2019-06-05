@@ -87,6 +87,7 @@
                     <connections>
                         <outlet property="playAgainButton" destination="zBf-Db-Ue7" id="ni5-ng-3Y7"/>
                         <outlet property="resultLabel" destination="PmJ-7x-I4B" id="Jlq-Yt-u12"/>
+                        <outlet property="rock" destination="gZI-Ml-xuM" id="mGh-cJ-dox"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eWN-Rd-8Yt" userLabel="First Responder" sceneMemberID="firstResponder"/>
