@@ -21,12 +21,15 @@
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="esT-hy-bvG">
                                 <rect key="frame" x="174" y="179" width="75" height="65"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" image="paper"/>
+                                <state key="normal" image="d1"/>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZfZ-h8-KJ2">
                                 <rect key="frame" x="70" y="315" width="75" height="65"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" image="rock"/>
+                                <state key="normal" image="d2"/>
+                                <connections>
+                                    <action selector="rockButtonPressed" destination="BYZ-38-t0r" eventType="touchUpInside" id="vLj-Di-0uu"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Let's Play!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LaI-Ku-OkJ">
                                 <rect key="frame" x="168" y="522" width="87" height="23"/>
@@ -38,7 +41,7 @@
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e6Q-Du-YB2">
                                 <rect key="frame" x="273" y="315" width="75" height="65"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" image="scissors"/>
+                                <state key="normal" image="d3"/>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -85,9 +88,11 @@
                         <viewLayoutGuide key="safeArea" id="fMN-hE-7MS"/>
                     </view>
                     <connections>
+                        <outlet property="paper" destination="gZI-Ml-xuM" id="Vpk-30-kfq"/>
                         <outlet property="playAgainButton" destination="zBf-Db-Ue7" id="ni5-ng-3Y7"/>
                         <outlet property="resultLabel" destination="PmJ-7x-I4B" id="Jlq-Yt-u12"/>
                         <outlet property="rock" destination="gZI-Ml-xuM" id="mGh-cJ-dox"/>
+                        <outlet property="scissors" destination="gZI-Ml-xuM" id="zHw-IT-A78"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eWN-Rd-8Yt" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -96,8 +101,8 @@
         </scene>
     </scenes>
     <resources>
-        <image name="paper" width="75" height="65"/>
-        <image name="rock" width="75" height="65"/>
-        <image name="scissors" width="75" height="65"/>
+        <image name="d1" width="75" height="65"/>
+        <image name="d2" width="75" height="65"/>
+        <image name="d3" width="75" height="65"/>
     </resources>
 </document>

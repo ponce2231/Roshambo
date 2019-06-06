@@ -27,12 +27,14 @@ class PlayVC: UIViewController {
 
     
     @IBAction func rockButtonPressed(){
-        let resultVC: ResultsVC
+        var controller: ResultsVC
         
-        resultVC = storyboard?.instantiateViewController(withIdentifier: "ResultsVC") as! ResultsVC
+        controller = storyboard?.instantiateViewController(withIdentifier: "ResultsVC") as! ResultsVC
         
-        resultVC.rockValue = self.randomSelection()
-        self.present(resultVC,animated: true, completion: nil)
+        controller.rockValue = randomSelection()
+        controller.paperValue = randomSelection()
+        controller.scissorsValue = randomSelection()
+        self.present(controller,animated: true, completion: nil)
     }
 }
 

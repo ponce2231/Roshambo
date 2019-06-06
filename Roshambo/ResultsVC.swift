@@ -6,9 +6,11 @@
 //  Copyright © 2019 none. All rights reserved.
 //
 
+import Foundation
 import UIKit
 
 class ResultsVC: UIViewController {
+    
     var rockValue:Int?
     var paperValue:Int?
     var scissorsValue:Int?
@@ -33,7 +35,7 @@ class ResultsVC: UIViewController {
         }else{
             self.paper.image = nil
         }
-        
+
         if let scissorsValue = self.scissorsValue{
             self.scissors.image = UIImage(named: "d\(scissorsValue)")
         }else{
@@ -45,16 +47,12 @@ class ResultsVC: UIViewController {
         self.scissors.alpha = 0
     }
     
-    override func viewDidLoad() {
-        
-        UIView.animate(withDuration: 0.3){
-            self.rock.alpha = 1
-            self.paper.alpha = 1
-            self.scissors.alpha = 1
+    override func viewDidAppear(_ animated: Bool) {
+            UIView.animate(withDuration: 0.3){
+                self.rock.alpha = 1
+                 self.paper.alpha = 1
+                 self.scissors.alpha = 1
         }
-        super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
     }
 
 }
