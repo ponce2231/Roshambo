@@ -11,9 +11,10 @@ import UIKit
 
 class ResultsVC: UIViewController {
     
-    var rockValue:Int?
-    var paperValue:Int?
-    var scissorsValue:Int?
+    var inputValue:String?
+    var storeData:Int?
+    
+    
     
     @IBOutlet var rock:UIImageView!
     @IBOutlet var paper: UIImageView!
@@ -22,22 +23,24 @@ class ResultsVC: UIViewController {
     
     @IBOutlet weak var playAgainButton: UIButton!
     @IBOutlet var resultLabel: UIView!
-    
+
+    // arreglar como dar valor de imagenes a variables`
     override func viewWillAppear(_ animated: Bool) {
-        if let rockValue = self.rockValue{
-            self.rock.image = UIImage(named: "d\(rockValue)")
+        if let inputValue = self.inputValue{
+            self.rock.image = UIImage(named: inputValue)
         }else{
             self.rock.image = nil
         }
         
-        if let paperValue = self.paperValue{
-            self.paper.image = UIImage(named: "d\(paperValue)")
+        if let inputValue = self.inputValue{
+            self.paper.image = UIImage(named: inputValue)
         }else{
             self.paper.image = nil
         }
 
-        if let scissorsValue = self.scissorsValue{
-            self.scissors.image = UIImage(named: "d\(scissorsValue)")
+        if let inputValue = self.inputValue{
+            self.scissors.image = UIImage(named: inputValue)
+            print("rock")
         }else{
             self.scissors.image = nil
         }
@@ -54,5 +57,17 @@ class ResultsVC: UIViewController {
                  self.scissors.alpha = 1
         }
     }
+    
+    @IBAction func playAgainButtonPressed(){
+        self.dismiss(animated: true, completion: nil)
+    }
+    
+    func randomSelection() -> Int {
+        let randomValue = 1 + arc4random() % 3
+        
+        return Int(randomValue)
+    }
+    
+    
 
 }

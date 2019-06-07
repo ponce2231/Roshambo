@@ -19,21 +19,30 @@ class PlayVC: UIViewController {
         // Do any additional setup after loading the view.
     }
 
-    func randomSelection() -> Int {
-        let randomValue = 1 + arc4random() % 3
+ 
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
-        return Int(randomValue)
+        if segue.identifier == "paperSegue"{
+            var resultVC: ResultsVC
+            
+            resultVC = segue.destination as! ResultsVC
+            resultVC.inputValue = "selection1"
+        }
+        
     }
 
+    @IBAction func paperButtonPressed(_ sender: Any) {
+        performSegue(withIdentifier: "paperSegue", sender: self)
+    }
+    
     
     @IBAction func rockButtonPressed(){
         var controller: ResultsVC
         
         controller = storyboard?.instantiateViewController(withIdentifier: "ResultsVC") as! ResultsVC
         
-        controller.rockValue = randomSelection()
-        controller.paperValue = randomSelection()
-        controller.scissorsValue = randomSelection()
+        controller.inputValue = "selection2"
+
         self.present(controller,animated: true, completion: nil)
     }
 }

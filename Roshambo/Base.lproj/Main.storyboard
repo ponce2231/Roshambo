@@ -21,12 +21,15 @@
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="esT-hy-bvG">
                                 <rect key="frame" x="174" y="179" width="75" height="65"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" image="d1"/>
+                                <state key="normal" image="selection1"/>
+                                <connections>
+                                    <action selector="paperButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="mfd-vG-wlN"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZfZ-h8-KJ2">
                                 <rect key="frame" x="70" y="315" width="75" height="65"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" image="d2"/>
+                                <state key="normal" image="selection2"/>
                                 <connections>
                                     <action selector="rockButtonPressed" destination="BYZ-38-t0r" eventType="touchUpInside" id="vLj-Di-0uu"/>
                                 </connections>
@@ -41,7 +44,10 @@
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e6Q-Du-YB2">
                                 <rect key="frame" x="273" y="315" width="75" height="65"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" image="d3"/>
+                                <state key="normal" image="selection3"/>
+                                <connections>
+                                    <segue destination="mRD-6y-Ag6" kind="show" id="D67-Vg-Znx"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -52,6 +58,7 @@
                         <outlet property="playLabel" destination="LaI-Ku-OkJ" id="GFL-wu-54S"/>
                         <outlet property="rockButton" destination="ZfZ-h8-KJ2" id="cUp-5E-J8t"/>
                         <outlet property="scissorsButton" destination="e6Q-Du-YB2" id="VPS-TX-30M"/>
+                        <segue destination="mRD-6y-Ag6" kind="show" identifier="paperSegue" id="98d-ME-cER"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -82,6 +89,9 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="19"/>
                                 <state key="normal" title="Play again"/>
+                                <connections>
+                                    <action selector="playAgainButtonPressed" destination="mRD-6y-Ag6" eventType="touchUpInside" id="QAU-Bs-kE5"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -101,8 +111,11 @@
         </scene>
     </scenes>
     <resources>
-        <image name="d1" width="75" height="65"/>
-        <image name="d2" width="75" height="65"/>
-        <image name="d3" width="75" height="65"/>
+        <image name="selection1" width="75" height="65"/>
+        <image name="selection2" width="75" height="65"/>
+        <image name="selection3" width="75" height="65"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="98d-ME-cER"/>
+    </inferredMetricsTieBreakers>
 </document>
