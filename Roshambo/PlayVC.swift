@@ -19,7 +19,15 @@ class PlayVC: UIViewController {
         // Do any additional setup after loading the view.
     }
 
- 
+    //MARK: Segue only
+    
+    //{
+    
+    @IBAction func paperButtonPressed(_ sender: Any) {
+        performSegue(withIdentifier: "paperSegue", sender: self)
+    }
+    
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
         if segue.identifier == "paperSegue"{
@@ -29,13 +37,18 @@ class PlayVC: UIViewController {
             resultVC.inputValue = "selection1"
         }
         
-    }
-
-    @IBAction func paperButtonPressed(_ sender: Any) {
-        performSegue(withIdentifier: "paperSegue", sender: self)
+        if segue.identifier == "scissorsSegue"{
+            var resultVC: ResultsVC
+            resultVC = segue.destination as! ResultsVC
+            
+            resultVC.inputValue = "selection3"
+        }
+        
     }
     
+    //}
     
+    //MARK: code only
     @IBAction func rockButtonPressed(){
         var controller: ResultsVC
         

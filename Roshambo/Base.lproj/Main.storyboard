@@ -46,7 +46,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="selection3"/>
                                 <connections>
-                                    <segue destination="mRD-6y-Ag6" kind="show" id="D67-Vg-Znx"/>
+                                    <segue destination="mRD-6y-Ag6" kind="show" identifier="scissorsSegue" id="D67-Vg-Znx"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -116,6 +116,6 @@
         <image name="selection3" width="75" height="65"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="98d-ME-cER"/>
+        <segue reference="D67-Vg-Znx"/>
     </inferredMetricsTieBreakers>
 </document>
