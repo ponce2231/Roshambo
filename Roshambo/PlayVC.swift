@@ -21,8 +21,6 @@ class PlayVC: UIViewController {
 
     //MARK:Code and Segue
     
-    //{
-    
     @IBAction func paperButtonPressed(_ sender: Any) {
         performSegue(withIdentifier: "paperSegue", sender: self)
     }
@@ -45,8 +43,6 @@ class PlayVC: UIViewController {
         }
         
     }
-    
-    //}
     
     //MARK: code only
     @IBAction func rockButtonPressed(){
