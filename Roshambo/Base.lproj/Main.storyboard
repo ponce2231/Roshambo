@@ -77,13 +77,6 @@
                                 <rect key="frame" x="87" y="189" width="240" height="128"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PmJ-7x-I4B">
-                                <rect key="frame" x="186" y="389" width="0.0" height="0.0"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zBf-Db-Ue7">
                                 <rect key="frame" x="164" y="518" width="87" height="35"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -93,6 +86,13 @@
                                     <action selector="playAgainButtonPressed" destination="mRD-6y-Ag6" eventType="touchUpInside" id="QAU-Bs-kE5"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PmJ-7x-I4B">
+                                <rect key="frame" x="87" y="400" width="240" height="33"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="fMN-hE-7MS"/>
@@ -100,9 +100,10 @@
                     <connections>
                         <outlet property="paper" destination="gZI-Ml-xuM" id="Vpk-30-kfq"/>
                         <outlet property="playAgainButton" destination="zBf-Db-Ue7" id="ni5-ng-3Y7"/>
-                        <outlet property="resultLabel" destination="PmJ-7x-I4B" id="Jlq-Yt-u12"/>
+                        <outlet property="resultLabel" destination="PmJ-7x-I4B" id="B9w-fm-CXp"/>
                         <outlet property="rock" destination="gZI-Ml-xuM" id="mGh-cJ-dox"/>
                         <outlet property="scissors" destination="gZI-Ml-xuM" id="zHw-IT-A78"/>
+                        <outlet property="tie" destination="gZI-Ml-xuM" id="KOj-hc-8Kh"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eWN-Rd-8Yt" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -116,6 +117,6 @@
         <image name="selection3" width="75" height="65"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="D67-Vg-Znx"/>
+        <segue reference="98d-ME-cER"/>
     </inferredMetricsTieBreakers>
 </document>

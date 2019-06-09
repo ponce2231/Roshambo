@@ -19,7 +19,7 @@ class PlayVC: UIViewController {
         // Do any additional setup after loading the view.
     }
 
-    //MARK: Segue only
+    //MARK:Code and Segue
     
     //{
     
@@ -34,14 +34,14 @@ class PlayVC: UIViewController {
             var resultVC: ResultsVC
             
             resultVC = segue.destination as! ResultsVC
-            resultVC.inputValue = "selection1"
+            resultVC.userChoice = 1
         }
-        
+        //MARK: segue only
         if segue.identifier == "scissorsSegue"{
             var resultVC: ResultsVC
             resultVC = segue.destination as! ResultsVC
             
-            resultVC.inputValue = "selection3"
+            resultVC.userChoice = 3
         }
         
     }
@@ -54,7 +54,7 @@ class PlayVC: UIViewController {
         
         controller = storyboard?.instantiateViewController(withIdentifier: "ResultsVC") as! ResultsVC
         
-        controller.inputValue = "selection2"
+        controller.userChoice = 2
 
         self.present(controller,animated: true, completion: nil)
     }
