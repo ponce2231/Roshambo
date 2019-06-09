@@ -14,58 +14,36 @@ class ResultsVC: UIViewController {
     var appChoice:Int?
     
     
-    
+    //MARK: OUTLETS connections
     @IBOutlet var rock:UIImageView!
     @IBOutlet var paper: UIImageView!
     @IBOutlet var scissors: UIImageView!
     @IBOutlet var tie: UIImageView!
-    
-    
     @IBOutlet weak var playAgainButton: UIButton!
     @IBOutlet weak var resultLabel: UILabel!
     
     
     override func viewWillAppear(_ animated: Bool) {
         appChoice = randomSelection()
-        
-        if let userValue = userChoice, let pcValue = appChoice {
+        //MARK: user play by iphone play
+        if let userValue = userChoice, let iphoneValue = appChoice {
             
-            if userValue == pcValue{
+            if userValue == iphoneValue{
                     self.tie.image = UIImage(named:"result\(4)" )
                     resultLabel.text = "its a tie"
-                }else if pcValue == 1 && userValue == 2 || userValue == 1 && pcValue == 2 {
+                }else if iphoneValue == 1 && userValue == 2 || userValue == 1 && iphoneValue == 2 {
                     self.paper.image = UIImage(named:"result\(1)" )
                     resultLabel.text = "Paper covers rock"
-                }else if userValue == 2 && pcValue == 3 || pcValue == 2 && userValue == 3{
+                }else if userValue == 2 && iphoneValue == 3 || iphoneValue == 2 && userValue == 3{
                     self.rock.image = UIImage(named:"result\(3)" )
                     resultLabel.text = "Rock covers scissors"
-                }else if userValue == 3 && pcValue == 1 || pcValue == 3 && userValue == 1{
+                }else if userValue == 3 && iphoneValue == 1 || iphoneValue == 3 && userValue == 1{
                         self.scissors.image = UIImage(named:"result\(2)" )
                         resultLabel.text = "Scissors cuts paper"
                 }
             
        
         }
-        
-        
-        
-//        if let inputValue = self.inputValue{
-//            self.rock.image = UIImage(named: inputValue)
-//        }else{
-//            self.rock.image = nil
-//        }
-//
-//        if let inputValue = self.inputValue{
-//            self.paper.image = UIImage(named: inputValue)
-//        }else{
-//            self.paper.image = nil
-//        }
-//
-//        if let inputValue = self.inputValue{
-//            self.scissors.image = UIImage(named: inputValue)
-//        }else{
-//            self.scissors.image = nil
-//        }
         
         self.rock.alpha = 0
         self.paper.alpha = 0
