@@ -31,19 +31,19 @@ class ResultsVC: UIViewController {
         if let userValue = userChoice, let pcValue = appChoice {
             
             if userValue == pcValue{
-                
-                self.tie.image = UIImage(named:"result\(4)" )
-                resultLabel.text = "its a tie"
-            }else if userValue > pcValue{
-                self.scissors.image = UIImage(named:"result\(2)" )
-                resultLabel.text = "Scissors cuts paper"
-            }else if pcValue > userValue{
-                self.paper.image = UIImage(named:"result\(1)" )
-                resultLabel.text = "Paper covers rock"
-            }else{
-                self.rock.image = UIImage(named:"result\(3)" )
-                resultLabel.text = "Rock covers scissors"
-            }
+                    self.tie.image = UIImage(named:"result\(4)" )
+                    resultLabel.text = "its a tie"
+                }else if pcValue == 1 && userValue == 2 || userValue == 1 && pcValue == 2 {
+                    self.paper.image = UIImage(named:"result\(1)" )
+                    resultLabel.text = "Paper covers rock"
+                }else if userValue == 2 && pcValue == 3 || pcValue == 2 && userValue == 3{
+                    self.rock.image = UIImage(named:"result\(3)" )
+                    resultLabel.text = "Rock covers scissors"
+                }else if userValue == 3 && pcValue == 1 || pcValue == 3 && userValue == 1{
+                        self.scissors.image = UIImage(named:"result\(2)" )
+                        resultLabel.text = "Scissors cuts paper"
+                }
+            
        
         }
         
